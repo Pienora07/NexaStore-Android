@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1769E0">
+  <title>NexaStore — Discover. Download. Develop.</title>
+  <meta name="description" content="Discover apps, games and useful tools on NexaStore. Explore new apps and download from developers.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#">
+    <span class="brand-icon">N</span>
+    <span>NexaStore</span>
+  </a>
+
+  <div class="header-actions">
+    <button id="adminBtn" class="login-btn" hidden>Admin Dashboard</button>
+    <button id="loginBtn" class="login-btn">Sign in</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">YOUR APP DISCOVERY PLATFORM</p>
+    <h1>Discover something <span>amazing.</span></h1>
+    <p class="hero-description">
+      Explore apps, discover games and find tools that make your digital life better.
+    </p>
+
+    <div class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <input id="searchInput" type="search" autocomplete="off"
+        aria-label="Search apps" aria-expanded="false"
+        placeholder="Search apps, games, developers...">
+      <div id="searchSuggestions" class="search-suggestions" hidden></div>
+    </div>
+  </section>
+
+  <section class="apps-section featured-section" id="featuredSection" hidden>
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">⭐ HANDPICKED HIGHLIGHTS</p>
+        <h2>Featured Apps</h2>
+      </div>
+      <span class="featured-label">PROMOTED</span>
+    </div>
+    <div id="featuredGrid" class="apps-grid"></div>
+  </section>
+
+  <section class="apps-section discover-section">
+    <div class="section-heading discover-heading">
+      <div>
+        <p class="eyebrow">EXPLORE NEXASTORE</p>
+        <h2>Discover Apps</h2>
+      </div>
+
+      <select id="sortSelect" aria-label="Sort apps">
+        <option value="latest">Latest</option>
+        <option value="popular">Popular</option>
+        <option value="name">A–Z</option>
+      </select>
+    </div>
+
+    <div class="category-list" id="categoryList">
+      <button class="category active" data-category="All">All</button>
+      <button class="category" data-category="Games">🎮 Games</button>
+      <button class="category" data-category="Tools">🛠 Tools</button>
+      <button class="category" data-category="Education">📚 Education</button>
+      <button class="category" data-category="Entertainment">🎬 Entertainment</button>
+      <button class="category" data-category="Photography">📷 Photography</button>
+      <button class="category" data-category="Productivity">⚡ Productivity</button>
+      <button class="category" data-category="Social">💬 Social</button>
+      <button class="category" data-category="Music & Audio">🎵 Music & Audio</button>
+      <button class="category" data-category="Personalization">🎨 Personalization</button>
+      <button class="category" data-category="Other">Other</button>
+    </div>
+
+    <div id="appsGrid" class="apps-grid">
+      <div class="loading">
+        <div class="loader"></div>
+        <p>Connecting to NexaStore...</p>
+      </div>
+    </div>
+
+    <p id="emptyMessage" class="empty-message" hidden>
+      No apps found. Try another name or category.
+    </p>
+  </section>
+
+  <section class="developer-banner">
+    <div>
+      <p class="eyebrow">FOR DEVELOPERS</p>
+      <h2>Have an app to share?</h2>
+      <p>Bring your creation to NexaStore.</p>
+    </div>
+    <button id="developerBtn">Get started →</button>
+  </section>
+</main>
+
+<footer>
+  <a class="brand footer-brand" href="#">
+    <span class="brand-icon">N</span>
+    NexaStore
+  </a>
+  <p>Discover. Download. Develop.</p>
+  <p>© <span id="year"></span> NexaStore</p>
+</footer>
+
+<nav class="bottom-nav">
+  <a href="#" class="nav-item selected">⌂<span>Home</span></a>
+  <a href="#categoryList" class="nav-item">▦<span>Categories</span></a>
+  <button id="navDeveloper" class="nav-item">＋<span>Develop</span></button>
+  <button id="navAccount" class="nav-item">◉<span>Account</span></button>
+</nav>
+
+<script type="module" src="app.js"></script>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
